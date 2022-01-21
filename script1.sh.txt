@@ -1,0 +1,3 @@
+#script1.sh
+for ip in `seq 1 254`; do
+ping -c 1 $1.$ip | grep "Pinging" | cut -d " " -f 2 & done
